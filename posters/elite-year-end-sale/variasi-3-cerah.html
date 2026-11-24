@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>AIHAA Elite – Year End Sale (Variasi 3: Cerah)</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; background: #fff; }
+  body { font-family: "Mont", sans-serif; }
+
+  :root { --navy: #0d2557; --navy2: #163a80; --gold1: #fbe39a; --gold2: #e2ae3f; --gold3: #b07a1c; }
+
+  .poster { position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(120,170,235,.30) 0, rgba(120,170,235,0) 260px),
+      radial-gradient(circle at 92% 46%, rgba(120,170,235,.28) 0, rgba(120,170,235,0) 300px),
+      linear-gradient(180deg, #ffffff 0%, #f2f7fd 42%, #dbe8f8 100%); }
+  .layer { position: absolute; inset: 0; }
+
+  .logo { position: absolute; top: 30px; left: 0; right: 0; text-align: center; }
+  .logo .brand { font-weight: 800; font-size: 50px; letter-spacing: 3px; line-height: 1;
+    background: linear-gradient(180deg, #f7c93c 0%, #e0a114 55%, #b97d06 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 2px 0 rgba(13,37,87,.25)); }
+  .logo .sub { margin-top: 4px; font-weight: 700; font-size: 13.5px; letter-spacing: 1.6px; color: var(--navy); }
+
+  .title { position: absolute; top: 104px; left: 0; width: 1080px; height: 236px; overflow: visible; }
+
+  .win { position: absolute; left: 112px; top: 346px; width: 856px; height: 640px; border-radius: 40px; padding: 6px;
+    background: linear-gradient(135deg, #fff0bd 0%, #d59f3a 25%, #fff3c9 50%, #b9812a 75%, #f7dc93 100%);
+    box-shadow: 0 0 0 3px #fff, 0 24px 46px rgba(13,37,87,.35); }
+  .win img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; border-radius: 34px; }
+  .win::after { content: ""; position: absolute; inset: 15px; border-radius: 28px; border: 1.5px solid rgba(255,232,170,.45); }
+
+  .seal { position: absolute; left: 40px; top: 290px; width: 176px; height: 176px; transform: rotate(-12deg);
+          filter: drop-shadow(0 10px 16px rgba(13,37,87,.35)); }
+  .seal .txt { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .seal .t1 { font-weight: 800; font-size: 19px; letter-spacing: 5px; line-height: 1; margin-left: 5px; color: #fff; }
+  .seal .t2 { font-weight: 900; font-size: 34px; line-height: 1.05;
+    background: linear-gradient(180deg, #fff2bf, #f1c55a 55%, #d39a2c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .price { position: absolute; left: 64px; top: 998px; width: 520px; color: var(--navy); }
+  .price .row { display: flex; align-items: baseline; gap: 16px; }
+  .price .lbl { font-weight: 700; font-size: 20px; letter-spacing: 3.5px; color: #3a4f7d; }
+  .price .old { position: relative; font-weight: 600; font-size: 42px; color: #4b5d86; line-height: 1; }
+  .price .old::after { content: ""; position: absolute; left: -4px; right: -4px; top: 50%; height: 4px; background: #d71f26; transform: rotate(-6deg); border-radius: 2px; }
+  .price .pill { display: inline-block; margin-top: 10px; padding: 9px 26px 9px 28px; border-radius: 30px;
+    background: linear-gradient(90deg, #f3cf6e, #fbe7a6 50%, #e1ad42); color: var(--navy);
+    font-weight: 800; font-size: 22px; letter-spacing: 5px; box-shadow: 0 6px 14px rgba(176,122,28,.35); }
+  .price .new { margin-top: 2px; font-style: italic; font-weight: 900; font-size: 104px; letter-spacing: -2px; line-height: 1; color: var(--navy);
+    text-shadow: 4px 4px 0 #e2ae3f, 0 14px 22px rgba(13,37,87,.25); }
+  .price .new .rm { font-size: 56px; margin-right: 10px; letter-spacing: 0; vertical-align: 30px; }
+
+  .perks { position: absolute; left: 612px; top: 1016px; width: 412px; display: flex; flex-direction: column; gap: 24px; }
+  .perk { position: relative; height: 80px; }
+  .perk .pill { position: absolute; left: 44px; right: 0; top: 6px; height: 68px; border-radius: 40px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy2) 100%); border: 2px solid #e2ae3f;
+    display: flex; align-items: center; padding-left: 54px; color: #fff; font-weight: 700; font-size: 19px; letter-spacing: 4.5px; line-height: 1.25;
+    box-shadow: 0 10px 20px rgba(13,37,87,.3); }
+  .perk .ic { position: absolute; left: 0; top: 0; width: 80px; height: 80px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff1bf 0%, #eabd57 40%, #b57f22 80%, #82581a 100%);
+    box-shadow: 0 0 0 4px #fff, 0 8px 16px rgba(13,37,87,.3); display: flex; align-items: center; justify-content: center; }
+  .perk .ic svg { width: 44px; height: 44px; }
+
+  .foot { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; color: #fff;
+          font-weight: 800; font-size: 25px; letter-spacing: 3.5px; display: flex; justify-content: center; align-items: center; gap: 20px; }
+  .foot .g { color: #f6d27a; }
+  .foot .dot { width: 10px; height: 10px; background: #f6d27a; transform: rotate(45deg); }
+</style>
+</head>
+<body>
+<div class="poster" id="poster">
+
+  <!-- Background decor: top swoosh, sparkles, confetti -->
+  <svg class="layer" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+      <linearGradient id="navyG" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#0a1d47"/><stop offset="1" stop-color="#1a4290"/>
+      </linearGradient>
+      <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#b07a1c"/><stop offset=".3" stop-color="#fbe39a"/><stop offset=".6" stop-color="#e2ae3f"/><stop offset="1" stop-color="#fff0bf"/>
+      </linearGradient>
+    </defs>
+    <!-- top corner swooshes -->
+    <path d="M1080 0 L1080 250 C 1010 170, 930 90, 780 0 Z" fill="url(#navyG)"/>
+    <path d="M1080 268 C 1000 178, 915 92, 755 0" stroke="url(#goldLine)" stroke-width="5" fill="none"/>
+    <path d="M0 0 L0 170 C 70 110, 140 50, 260 0 Z" fill="url(#navyG)" opacity=".92"/>
+    <path d="M0 188 C 76 122, 150 56, 286 0" stroke="url(#goldLine)" stroke-width="4" fill="none"/>
+    <g id="deco"></g>
+    <!-- bottom wave -->
+    <path d="M0 1258 C 260 1206, 520 1214, 760 1236 C 900 1249, 1000 1246, 1080 1226 L1080 1350 L0 1350 Z" fill="url(#navyG)"/>
+    <path d="M0 1246 C 260 1194, 520 1202, 760 1224 C 900 1237, 1000 1234, 1080 1214" stroke="url(#goldLine)" stroke-width="6" fill="none"/>
+  </svg>
+
+  <div class="logo"><div class="brand">AIHAA</div><div class="sub">MARKETING SDN BHD</div></div>
+
+  <svg class="title" viewBox="0 0 1080 236">
+    <defs>
+      <linearGradient id="goldFace" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff6cf"/><stop offset=".32" stop-color="#ffd665"/>
+        <stop offset=".58" stop-color="#e3a42a"/><stop offset=".82" stop-color="#ffe7a0"/><stop offset="1" stop-color="#c58a24"/>
+      </linearGradient>
+      <filter id="ts" x="-10%" y="-20%" width="120%" height="150%">
+        <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#0d2557" flood-opacity=".3"/>
+      </filter>
+      <text id="ye" x="540" y="78" text-anchor="middle" font-family="Mont" font-style="italic" font-weight="900" font-size="84" letter-spacing="3">YEAR END</text>
+      <text id="sale" x="540" y="226" text-anchor="middle" font-family="Mont" font-style="italic" font-weight="900" font-size="178" letter-spacing="6">SALE</text>
+    </defs>
+    <g filter="url(#ts)">
+      <use href="#ye" fill="#0d2557"/>
+    </g>
+    <!-- gold underline swoosh under YEAR END -->
+    <path d="M330 98 C 470 88, 640 86, 760 92" stroke="url(#goldFace)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <g filter="url(#ts)">
+      <g id="saleExtrude" stroke-width="10" stroke-linejoin="round"></g>
+      <use href="#sale" fill="#0d2557" stroke="#0d2557" stroke-width="10" stroke-linejoin="round"/>
+      <use href="#sale" fill="url(#goldFace)"/>
+    </g>
+  </svg>
+
+  <div class="win"><img src="assets/elite-scene.jpg" alt="AIHAA Elite hitam dan putih"></div>
+
+  <div class="seal">
+    <svg width="176" height="176" viewBox="-88 -88 176 176">
+      <path id="burst" fill="#0d2557" stroke="#e2ae3f" stroke-width="2.5"></path>
+      <circle r="66" fill="none" stroke="#f1c55a" stroke-width="2" stroke-dasharray="3 5"/>
+      <circle r="60" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+    </svg>
+    <div class="txt"><div class="t1">JIMAT</div><div class="t2">RM400</div></div>
+  </div>
+
+  <div class="price">
+    <div class="row"><span class="lbl">HARGA ASAL</span><span class="old">RM1,680</span></div>
+    <div class="pill">HARGA PROMOSI</div>
+    <div class="new"><span class="rm">RM</span>1,280</div>
+  </div>
+
+  <div class="perks">
+    <div class="perk">
+      <div class="pill">PERCUMA<br>PEMASANGAN</div>
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30.5 7.5a9 9 0 0 0-8.9 11.6L8.8 31.9a3.6 3.6 0 0 0 5.1 5.1l12.8-12.8A9 9 0 0 0 38.3 15l-5.6 5.6-4.9-1.3-1.3-4.9 5.6-5.6a9 9 0 0 0-1.6-1.3z"/></svg></div>
+    </div>
+    <div class="perk">
+      <div class="pill">3 TAHUN<br>WARRANTY</div>
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 5 9 10.5v11.2c0 9.6 6.3 17.4 15 20.8 8.7-3.4 15-11.2 15-20.8V10.5L24 5z"/><path d="m17 24 5 5 9.5-10"/></svg></div>
+    </div>
+  </div>
+
+  <div class="foot"><span>PROMOSI <span class="g">HUJUNG TAHUN 2026</span></span><span class="dot"></span><span>TEMPAH SEKARANG!</span></div>
+</div>
+
+<script>
+  const NS = "http://www.w3.org/2000/svg";
+  let seed = 31122026;
+  const rnd = () => (seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296;
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+
+  // SALE extrusion in navy
+  const se = document.getElementById("saleExtrude");
+  for (let i = 12; i >= 1; i--) {
+    const t = i / 12, c = `rgb(${Math.round(30 - 18 * t)},${Math.round(70 - 40 * t)},${Math.round(150 - 80 * t)})`;
+    el("use", { href: "#sale", x: i * 0.4, y: i, fill: c, stroke: c }, se);
+  }
+
+  // Seal starburst
+  (() => { const p = [], n = 26; for (let i = 0; i < n * 2; i++) { const a = Math.PI * i / n, r = i % 2 ? 78 : 87; p.push(`${(r*Math.cos(a)).toFixed(2)},${(r*Math.sin(a)).toFixed(2)}`); }
+    document.getElementById("burst").setAttribute("d", "M" + p.join("L") + "Z"); })();
+
+  // Sparkles and gold confetti around the edges
+  const deco = document.getElementById("deco");
+  const sparkle = (x, y, s, col) => el("path", { d: `M${x} ${y - s} C ${x + s*.08} ${y - s*.16}, ${x + s*.16} ${y - s*.08}, ${x + s} ${y} C ${x + s*.16} ${y + s*.08}, ${x + s*.08} ${y + s*.16}, ${x} ${y + s} C ${x - s*.08} ${y + s*.16}, ${x - s*.16} ${y + s*.08}, ${x - s} ${y} C ${x - s*.16} ${y - s*.08}, ${x - s*.08} ${y - s*.16}, ${x} ${y - s} Z`, fill: col }, deco);
+  [[250, 150, 22, "#e2ae3f"], [842, 300, 16, "#e2ae3f"], [205, 318, 12, "#5b8fd6"], [1010, 330, 14, "#5b8fd6"], [60, 560, 12, "#e2ae3f"], [1030, 640, 18, "#e2ae3f"], [44, 860, 16, "#5b8fd6"], [1046, 930, 11, "#5b8fd6"], [790, 128, 12, "#5b8fd6"]]
+    .forEach(([x, y, s, c]) => sparkle(x, y, s, c));
+  const golds = ["#e2ae3f", "#f3cf6e", "#c58f2e", "#5b8fd6", "#9fc1ee"];
+  const zones = [[300, 18, 200, 70, 8], [600, 18, 200, 70, 8], [0, 220, 100, 760, 16], [985, 300, 95, 700, 16]];
+  for (const [zx, zy, zw, zh, count] of zones) for (let i = 0; i < count; i++) {
+    const x = zx + rnd() * zw, y = zy + rnd() * zh, w = 6 + rnd() * 9, h = 3 + rnd() * 4;
+    el("rect", { x: -w / 2, y: -h / 2, width: w, height: h, rx: 1, fill: golds[Math.floor(rnd() * golds.length)], opacity: (0.6 + rnd() * 0.4).toFixed(2),
+                 transform: `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${Math.round(rnd() * 360)})` }, deco);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>AIHAA Elite – Year End Sale (Variasi 2: Navy & Emas)</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; background: #000; }
+  body { font-family: "Mont", sans-serif; }
+
+  .poster { position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 75% 50% at 50% 46%, rgba(52, 96, 190, .45) 0%, rgba(0,0,0,0) 70%),
+      radial-gradient(ellipse 95% 70% at 50% 25%, #16306b 0%, #0b1a3f 50%, #040a1a 100%); }
+  .layer { position: absolute; inset: 0; }
+
+  .logo { position: absolute; top: 30px; left: 0; right: 0; text-align: center; }
+  .logo .brand { font-weight: 800; font-size: 48px; letter-spacing: 3px; line-height: 1;
+    background: linear-gradient(180deg, #ffe58a 0%, #f6c536 50%, #d99a12 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .logo .sub { margin-top: 4px; font-weight: 700; font-size: 13px; letter-spacing: 1.6px; color: #fff; }
+
+  .kicker { position: absolute; top: 112px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 22px; }
+  .kicker .ln { width: 150px; height: 2px; background: linear-gradient(90deg, rgba(240,200,110,0), #f0c86e); }
+  .kicker .ln.r { background: linear-gradient(90deg, #f0c86e, rgba(240,200,110,0)); }
+  .kicker .dm { width: 10px; height: 10px; background: #f6d27a; transform: rotate(45deg); box-shadow: 0 0 10px #f6d27a; }
+  .kicker .tx { font-family: "Cinzel", serif; font-weight: 800; font-size: 58px; letter-spacing: 14px; line-height: 1; padding-left: 14px;
+    background: linear-gradient(180deg, #fff7d6 0%, #f6d27a 45%, #c98f2a 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 3px 4px rgba(0,0,0,.6)); }
+
+  .title { position: absolute; top: 160px; left: 0; width: 1080px; height: 190px; overflow: visible; }
+
+  .win { position: absolute; left: 100px; top: 352px; width: 880px; height: 630px; border-radius: 42px; padding: 5px;
+    background: linear-gradient(135deg, #fff0bd 0%, #d59f3a 25%, #fff3c9 50%, #b9812a 75%, #f7dc93 100%);
+    box-shadow: 0 0 0 2px rgba(5,11,30,.9), 0 0 44px 6px rgba(255,200,110,.28), 0 26px 50px rgba(0,0,0,.6); }
+  .win img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; border-radius: 37px; }
+  .win::after { content: ""; position: absolute; inset: 14px; border-radius: 30px; border: 1.5px solid rgba(255,232,170,.45); pointer-events: none; }
+
+  .seal { position: absolute; left: 862px; top: 290px; width: 172px; height: 172px; transform: rotate(12deg);
+          filter: drop-shadow(0 10px 18px rgba(0,0,0,.6)); }
+  .seal .txt { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #0b1a3f; }
+  .seal .t1 { font-weight: 800; font-size: 20px; letter-spacing: 5px; line-height: 1; margin-left: 5px; }
+  .seal .t2 { font-weight: 900; font-size: 36px; line-height: 1.04; }
+
+  .ticket-wrap { position: absolute; left: 110px; top: 1004px; width: 860px; height: 156px; filter: drop-shadow(0 14px 22px rgba(0,0,0,.55)); }
+  .ticket { width: 100%; height: 100%; display: flex; align-items: center; color: #0b1a3f;
+    background: linear-gradient(120deg, #f9e3a3 0%, #e7b94e 28%, #fff2c6 50%, #dcaa45 74%, #f6d98a 100%);
+    -webkit-mask: radial-gradient(circle 24px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
+                  radial-gradient(circle 24px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
+            mask: radial-gradient(circle 24px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
+                  radial-gradient(circle 24px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
+    border-radius: 18px; }
+  .ticket .l { width: 300px; padding-left: 56px; }
+  .ticket .lbl { font-weight: 800; font-size: 18px; letter-spacing: 3.5px; line-height: 1; }
+  .ticket .old { position: relative; display: inline-block; margin-top: 8px; font-weight: 700; font-size: 44px; letter-spacing: 1px; line-height: 1; color: #3a4466; }
+  .ticket .old::after { content: ""; position: absolute; left: -4px; right: -4px; top: 50%; height: 4px; background: #d71f26; transform: rotate(-6deg); border-radius: 2px; }
+  .ticket .div { align-self: stretch; margin: 22px 0; border-left: 3px dashed rgba(11,26,63,.38); }
+  .ticket .r { flex: 1; text-align: center; padding-right: 30px; }
+  .ticket .r .lbl { font-size: 21px; letter-spacing: 5px; }
+  .ticket .new { font-weight: 900; font-size: 96px; letter-spacing: -1px; line-height: .95; margin-top: 4px; }
+  .ticket .new .rm { font-size: 54px; letter-spacing: 0; margin-right: 10px; vertical-align: 26px; }
+
+  .perks { position: absolute; left: 110px; top: 1184px; width: 860px; display: flex; justify-content: space-between; }
+  .chip { position: relative; width: 416px; height: 70px; }
+  .chip .pill { position: absolute; left: 40px; right: 0; top: 7px; height: 56px; border-radius: 30px; border: 2px solid rgba(246,210,122,.9);
+                background: rgba(5,11,30,.55); display: flex; align-items: center; padding-left: 46px;
+                color: #fff; font-weight: 700; font-size: 18.5px; letter-spacing: 3px; white-space: nowrap; }
+  .chip .ic { position: absolute; left: 0; top: 0; width: 70px; height: 70px; border-radius: 50%;
+              background: radial-gradient(circle at 35% 30%, #fbe7ad 0%, #e0b35a 40%, #a9762a 75%, #6f4a17 100%);
+              box-shadow: 0 0 0 3px #0b1a3f, 0 6px 14px rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; }
+  .chip .ic svg { width: 38px; height: 38px; }
+
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 66px; background: linear-gradient(180deg, #071233, #030818);
+         border-top: 2px solid #e6bb5c; box-shadow: 0 -8px 26px rgba(255,190,90,.18);
+         display: flex; align-items: center; justify-content: center; gap: 22px;
+         color: #fff; font-weight: 800; font-size: 24px; letter-spacing: 3.5px; }
+  .bar .gold { color: #f6d27a; }
+  .bar .dot { width: 10px; height: 10px; background: #f6d27a; transform: rotate(45deg); }
+</style>
+</head>
+<body>
+<div class="poster" id="poster">
+
+  <svg class="layer" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+      <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <g id="stars"></g>
+    <g id="fireworks" filter="url(#glow)"></g>
+    <g id="bokeh" filter="url(#soft)"></g>
+  </svg>
+
+  <div class="logo"><div class="brand">AIHAA</div><div class="sub">MARKETING SDN BHD</div></div>
+
+  <div class="kicker"><span class="ln"></span><span class="dm"></span><span class="tx">YEAR END</span><span class="dm"></span><span class="ln r"></span></div>
+
+  <svg class="title" viewBox="0 0 1080 190">
+    <defs>
+      <linearGradient id="goldFace" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff8d8"/><stop offset=".32" stop-color="#ffd970"/>
+        <stop offset=".56" stop-color="#e0a22a"/><stop offset=".8" stop-color="#ffe9a6"/><stop offset="1" stop-color="#c38522"/>
+      </linearGradient>
+      <filter id="tshadow" x="-10%" y="-20%" width="120%" height="150%">
+        <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".7"/>
+      </filter>
+      <radialGradient id="spark" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#fff4d6" stop-opacity=".8"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+      </radialGradient>
+      <text id="sale" x="540" y="172" text-anchor="middle" font-family="Mont" font-style="italic" font-weight="900" font-size="200" letter-spacing="6">SALE</text>
+      <symbol id="star" viewBox="-50 -50 100 100" overflow="visible">
+        <circle r="34" fill="url(#spark)"/>
+        <path d="M0 -50 C 3 -8, 8 -3, 50 0 C 8 3, 3 8, 0 50 C -3 8, -8 3, -50 0 C -8 -3, -3 -8, 0 -50 Z" fill="#fffaf0"/>
+      </symbol>
+    </defs>
+    <g filter="url(#tshadow)">
+      <g id="saleExtrude" stroke-width="12" stroke-linejoin="round"></g>
+      <use href="#sale" fill="#ffffff" stroke="#ffffff" stroke-width="12" stroke-linejoin="round"/>
+      <use href="#sale" fill="url(#goldFace)"/>
+    </g>
+    <use href="#star" x="196" y="20" width="64" height="64"/>
+    <use href="#star" x="792" y="120" width="48" height="48"/>
+  </svg>
+
+  <div class="win"><img src="assets/elite-scene.jpg" alt="AIHAA Elite hitam dan putih"></div>
+
+  <div class="seal">
+    <svg width="172" height="172" viewBox="-86 -86 172 172">
+      <defs>
+        <radialGradient id="sealG" cx=".38" cy=".32" r=".75">
+          <stop offset="0" stop-color="#fff3c2"/><stop offset=".45" stop-color="#f0c35a"/><stop offset="1" stop-color="#b47a1d"/>
+        </radialGradient>
+      </defs>
+      <path id="burst" fill="url(#sealG)" stroke="#fff0c0" stroke-width="1.2"></path>
+      <circle r="64" fill="none" stroke="#0b1a3f" stroke-width="2" stroke-dasharray="3 5" opacity=".6"/>
+      <circle r="58" fill="none" stroke="#fff6d6" stroke-width="1.5" opacity=".8"/>
+    </svg>
+    <div class="txt"><div class="t1">JIMAT</div><div class="t2">RM400</div></div>
+  </div>
+
+  <div class="ticket-wrap">
+    <div class="ticket">
+      <div class="l">
+        <div class="lbl">HARGA ASAL</div>
+        <div class="old">RM1,680</div>
+      </div>
+      <div class="div"></div>
+      <div class="r">
+        <div class="lbl">HARGA PROMOSI</div>
+        <div class="new"><span class="rm">RM</span>1,280</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="chip">
+      <div class="pill">PERCUMA PEMASANGAN</div>
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fffaf0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30.5 7.5a9 9 0 0 0-8.9 11.6L8.8 31.9a3.6 3.6 0 0 0 5.1 5.1l12.8-12.8A9 9 0 0 0 38.3 15l-5.6 5.6-4.9-1.3-1.3-4.9 5.6-5.6a9 9 0 0 0-1.6-1.3z"/></svg></div>
+    </div>
+    <div class="chip">
+      <div class="pill">3 TAHUN WARRANTY</div>
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fffaf0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 5 9 10.5v11.2c0 9.6 6.3 17.4 15 20.8 8.7-3.4 15-11.2 15-20.8V10.5L24 5z"/><path d="m17 24 5 5 9.5-10"/></svg></div>
+    </div>
+  </div>
+
+  <div class="bar"><span>PROMOSI <span class="gold">HUJUNG TAHUN 2026</span></span><span class="dot"></span><span>TEMPAH SEKARANG!</span></div>
+</div>
+
+<script>
+  const NS = "http://www.w3.org/2000/svg";
+  let seed = 7012027;
+  const rnd = () => (seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296;
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+
+  // Title extrusion (gold to deep brown)
+  const se = document.getElementById("saleExtrude");
+  for (let i = 14; i >= 1; i--) {
+    const t = i / 14;
+    const c = `rgb(${Math.round(214 - 120 * t)},${Math.round(150 - 92 * t)},${Math.round(46 - 30 * t)})`;
+    el("use", { href: "#sale", x: i * 0.35, y: i, fill: c, stroke: c }, se);
+  }
+
+  // Seal starburst
+  (() => { const p = [], n = 26; for (let i = 0; i < n * 2; i++) { const a = Math.PI * i / n, r = i % 2 ? 76 : 85; p.push(`${(r*Math.cos(a)).toFixed(2)},${(r*Math.sin(a)).toFixed(2)}`); }
+    document.getElementById("burst").setAttribute("d", "M" + p.join("L") + "Z"); })();
+
+  // Tiny stars
+  const st = document.getElementById("stars");
+  for (let i = 0; i < 90; i++) {
+    const x = rnd() * 1080, y = rnd() * 1000;
+    if (x > 90 && x < 990 && y > 340 && y < 990) continue; // keep off the product window
+    el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: (0.6 + rnd() * 1.4).toFixed(2), fill: rnd() < .7 ? "#ffffff" : "#ffe3a0", opacity: (0.35 + rnd() * 0.6).toFixed(2) }, st);
+  }
+
+  // Fireworks
+  const fw = document.getElementById("fireworks");
+  const bursts = [[120, 150, 92, "#ffd77a"], [960, 150, 100, "#ffe7a8"], [48, 300, 60, "#ffffff"], [1036, 300, 54, "#ffd77a"], [300, 52, 42, "#ffe7a8"], [790, 56, 40, "#ffffff"]];
+  bursts.forEach(([cx, cy, R, col], k) => {
+    const gid = "fwg" + k;
+    const g = el("radialGradient", { id: gid, gradientUnits: "userSpaceOnUse", cx, cy, r: R }, fw);
+    el("stop", { offset: "0", "stop-color": col, "stop-opacity": "0" }, g);
+    el("stop", { offset: ".35", "stop-color": col, "stop-opacity": ".25" }, g);
+    el("stop", { offset: ".85", "stop-color": col, "stop-opacity": ".95" }, g);
+    el("stop", { offset: "1", "stop-color": col, "stop-opacity": "0" }, g);
+    const n = 22;
+    for (let i = 0; i < n; i++) {
+      const a = (2 * Math.PI * i) / n + rnd() * 0.08, r1 = R * (0.82 + rnd() * 0.18), r0 = R * 0.12, w = 1.6;
+      const ca = Math.cos(a), sa = Math.sin(a), px = -sa * w, py = ca * w;
+      el("path", { d: `M${cx + ca * r0} ${cy + sa * r0} L${cx + ca * r1 + px} ${cy + sa * r1 + py} L${cx + ca * r1 - px} ${cy + sa * r1 - py} Z`, fill: `url(#${gid})` }, fw);
+      el("circle", { cx: (cx + ca * (r1 + 5)).toFixed(1), cy: (cy + sa * (r1 + 5)).toFixed(1), r: 1.8, fill: col, opacity: .9 }, fw);
+    }
+  });
+
+  // Bokeh
+  const bk = document.getElementById("bokeh");
+  [[60, 470, 18], [1030, 520, 16], [40, 880, 22], [1045, 900, 14], [210, 300, 10], [880, 250, 12]].forEach(([x, y, r]) =>
+    el("circle", { cx: x, cy: y, r, fill: "#ffd27a", opacity: (0.18 + rnd() * 0.2).toFixed(2) }, bk));
+</script>
+</body>
+</html>
