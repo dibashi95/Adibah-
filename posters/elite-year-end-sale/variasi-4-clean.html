@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AIHAA Elite – Year-End Sale (Variasi 4: Clean)</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; background: #fff; }
+  body { font-family: "InterX", sans-serif; color: #121212; -webkit-font-smoothing: antialiased; }
+
+  :root { --ink: #121212; --mute: #8a8783; --line: #dedad3; --accent: #a8834a; --accent-bg: #f3ebdd; }
+
+  .poster { position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 52% 30% at 50% 50%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 100%),
+      linear-gradient(180deg, #f8f7f4 0%, #f3f1ed 58%, #e9e6e0 74%, #f1efeb 100%); }
+
+  /* Header */
+  .hdr { position: absolute; top: 54px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
+  .brand { line-height: 1; }
+  .brand .w { font-family: "Mont", sans-serif; font-weight: 800; font-size: 30px; letter-spacing: 2px; color: #c4962c; }
+  .brand .s { font-family: "Mont", sans-serif; font-weight: 700; font-size: 8.2px; letter-spacing: 1.3px; color: #6d6a66; margin-top: 3px; }
+  .hdr .tag { font-weight: 500; font-size: 14px; letter-spacing: 3.5px; color: var(--mute); text-transform: uppercase; }
+
+  /* Headline */
+  .eyebrow { position: absolute; top: 150px; left: 0; right: 0; text-align: center;
+             font-weight: 600; font-size: 16px; letter-spacing: 9px; padding-left: 9px; color: var(--accent); }
+  .headline { position: absolute; top: 172px; left: 0; right: 0; text-align: center;
+              font-family: "InterD", sans-serif; font-weight: 600; font-size: 116px; letter-spacing: -4.5px; line-height: 1.05; color: var(--ink); }
+  .sub { position: absolute; top: 312px; left: 0; right: 0; text-align: center;
+         font-family: "InterD", sans-serif; font-weight: 300; font-size: 27px; letter-spacing: -.2px; color: #55524e; }
+
+  /* Product */
+  .shadow { position: absolute; border-radius: 50%; background: rgba(40,32,24,.55); filter: blur(14px); }
+  .shadow.soft { background: rgba(40,32,24,.16); filter: blur(30px); }
+  .prod { position: absolute; display: block; }
+
+  /* Price + features */
+  .price { position: absolute; left: 72px; top: 1036px; width: 470px; }
+  .label { font-weight: 600; font-size: 14px; letter-spacing: 4px; color: var(--mute); text-transform: uppercase; }
+  .amount { margin-top: 6px; font-family: "InterD", sans-serif; font-weight: 600; font-size: 100px; letter-spacing: -3.5px; line-height: 1; color: var(--ink); }
+  .amount .cur { font-size: 44px; font-weight: 500; letter-spacing: -1px; vertical-align: 40px; margin-right: 8px; }
+  .was { margin-top: 14px; display: flex; align-items: center; gap: 16px; }
+  .was .old { font-size: 20px; color: var(--mute); }
+  .was .old s { text-decoration-thickness: 1.5px; color: #77736e; }
+  .save { font-weight: 600; font-size: 13px; letter-spacing: 2.5px; color: #8a6a32; background: var(--accent-bg);
+          border: 1px solid #e3d3b5; border-radius: 30px; padding: 7px 14px 7px 16px; }
+
+  .vline { position: absolute; left: 574px; top: 1046px; width: 1px; height: 170px; background: var(--line); }
+
+  .feats { position: absolute; left: 626px; top: 1050px; width: 390px; display: flex; flex-direction: column; gap: 34px; }
+  .feat { display: flex; align-items: center; gap: 20px; }
+  .feat .ic { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 50%; border: 1.5px solid #d7c4a2; background: #fbf8f2;
+              display: flex; align-items: center; justify-content: center; }
+  .feat .ic svg { width: 28px; height: 28px; }
+  .feat .t { font-family: "InterD", sans-serif; font-weight: 600; font-size: 25px; letter-spacing: -.4px; line-height: 1.15; }
+  .feat .m { font-size: 15.5px; color: var(--mute); margin-top: 3px; }
+
+  /* Footer */
+  .fline { position: absolute; left: 72px; right: 72px; top: 1262px; height: 1px; background: var(--line); }
+  .ftr { position: absolute; left: 72px; right: 72px; top: 1290px; display: flex; justify-content: space-between; align-items: center; }
+  .ftr .sw { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 16px; color: #55524e; }
+  .ftr .sw .dot { width: 22px; height: 22px; border-radius: 50%; box-shadow: 0 0 0 1px #cfcac2, 0 2px 4px rgba(0,0,0,.12); }
+  .ftr .sw .dot.k { background: linear-gradient(135deg, #3a3a3a, #0c0c0c); }
+  .ftr .sw .dot.w { background: linear-gradient(135deg, #ffffff, #e4e2de); margin-left: 18px; }
+  .ftr .cta { font-family: "InterD", sans-serif; font-weight: 600; font-size: 19px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .ftr .cta .arr { width: 34px; height: 34px; border-radius: 50%; background: var(--ink); display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="poster" id="poster">
+
+  <div class="hdr">
+    <div class="brand"><div class="w">AIHAA</div><div class="s">MARKETING SDN BHD</div></div>
+    <div class="tag">Year-End Promotion 2026</div>
+  </div>
+
+  <div class="eyebrow">AIHAA ELITE</div>
+  <div class="headline">Year-End Sale</div>
+  <div class="sub">Save RM400. Available in black and white.</div>
+
+  <!-- soft floor shadows -->
+  <div class="shadow soft" style="left:120px; top:930px; width:860px; height:70px;"></div>
+  <div class="shadow" style="left:150px; top:950px; width:360px; height:22px;"></div>
+  <div class="shadow" style="left:560px; top:958px; width:390px; height:22px;"></div>
+
+  <!-- product cutouts (positions keep the original scene's proportions) -->
+  <img class="prod" src="assets/elite-white-cutout.png" style="left:544px; top:392px; width:401px; height:579px;" alt="AIHAA Elite white">
+  <img class="prod" src="assets/elite-black-cutout.png" style="left:136px; top:376px; width:382px; height:587px;" alt="AIHAA Elite black">
+
+  <div class="price">
+    <div class="label">Promo Price</div>
+    <div class="amount"><span class="cur">RM</span>1,280</div>
+    <div class="was">
+      <span class="old">Normal price <s>RM1,680</s></span>
+      <span class="save">SAVE RM400</span>
+    </div>
+  </div>
+
+  <div class="vline"></div>
+
+  <div class="feats">
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#a8834a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30.5 7.5a9 9 0 0 0-8.9 11.6L8.8 31.9a3.6 3.6 0 0 0 5.1 5.1l12.8-12.8A9 9 0 0 0 38.3 15l-5.6 5.6-4.9-1.3-1.3-4.9 5.6-5.6a9 9 0 0 0-1.6-1.3z"/></svg></div>
+      <div><div class="t">Free Installation</div><div class="m">Percuma pemasangan</div></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#a8834a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 5 9 10.5v11.2c0 9.6 6.3 17.4 15 20.8 8.7-3.4 15-11.2 15-20.8V10.5L24 5z"/><path d="m17 24 5 5 9.5-10"/></svg></div>
+      <div><div class="t">3-Year Warranty</div><div class="m">Waranti 3 tahun</div></div>
+    </div>
+  </div>
+
+  <div class="fline"></div>
+  <div class="ftr">
+    <div class="sw"><span class="dot k"></span>Black<span class="dot w"></span>White</div>
+    <div class="cta">Book yours today
+      <span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
