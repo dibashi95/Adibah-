@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AIHAA Elite – Year-End Sale (Variasi 7: Gradient Glass)</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; background: #fff; }
+  body { font-family: "InterX", sans-serif; color: #16152b; -webkit-font-smoothing: antialiased; }
+  :root { --ink: #16152b; --mute: #6c6984; --grad: linear-gradient(95deg, #6b5cff 0%, #3d8bff 50%, #ff8f6b 100%); }
+
+  .poster { position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background:
+      radial-gradient(circle at 10% 14%, rgba(186,176,255,.95) 0, rgba(186,176,255,0) 36%),
+      radial-gradient(circle at 92% 10%, rgba(255,205,182,.95) 0, rgba(255,205,182,0) 34%),
+      radial-gradient(circle at 88% 70%, rgba(170,214,255,.95) 0, rgba(170,214,255,0) 40%),
+      radial-gradient(circle at 8% 78%, rgba(255,214,232,.95) 0, rgba(255,214,232,0) 38%),
+      radial-gradient(circle at 50% 96%, rgba(196,186,255,.9) 0, rgba(196,186,255,0) 40%),
+      linear-gradient(165deg, #f6f4ff 0%, #eef3ff 55%, #f3eefc 100%); }
+
+  .glass { background: rgba(255,255,255,.46); border: 1px solid rgba(255,255,255,.85);
+           -webkit-backdrop-filter: blur(28px) saturate(1.5); backdrop-filter: blur(28px) saturate(1.5);
+           box-shadow: 0 18px 50px rgba(76,64,160,.16), inset 0 1px 0 rgba(255,255,255,.9); }
+
+  .logo { position: absolute; top: 46px; left: 0; right: 0; text-align: center; }
+  .logo .w { font-family: "Mont", sans-serif; font-weight: 800; font-size: 32px; letter-spacing: 2px; line-height: 1;
+             background: linear-gradient(180deg, #e0ac2c, #b07e10); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .logo .s { font-family: "Mont", sans-serif; font-weight: 700; font-size: 8.6px; letter-spacing: 1.4px; color: #5d5a73; margin-top: 3px; }
+
+  .pill { position: absolute; top: 116px; left: 50%; transform: translateX(-50%); border-radius: 40px; padding: 10px 22px;
+          display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; letter-spacing: 2.5px; color: #3d3a58; white-space: nowrap; }
+  .pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--grad); }
+
+  .h1 { position: absolute; top: 172px; left: 0; right: 0; text-align: center; font-family: "InterD", sans-serif; font-weight: 600;
+        font-size: 112px; letter-spacing: -4.5px; line-height: 1.05; }
+  .h1 .g { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 6px; }
+  .sub { position: absolute; top: 302px; left: 0; right: 0; text-align: center; font-family: "InterD", sans-serif; font-weight: 300; font-size: 26px; color: #4c4966; }
+
+  .shadow { position: absolute; border-radius: 50%; background: rgba(54,44,120,.32); filter: blur(14px); }
+
+  .chip { position: absolute; border-radius: 22px; padding: 14px 20px; text-align: left; }
+  .chip .k { font-weight: 600; font-size: 12px; letter-spacing: 2.5px; color: var(--mute); }
+  .chip .v { margin-top: 2px; font-family: "InterD", sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -1px;
+             background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .card { position: absolute; left: 56px; right: 56px; top: 1030px; height: 218px; border-radius: 36px;
+          display: grid; grid-template-columns: 1.05fr 1px 1fr; align-items: center; padding: 0 44px; column-gap: 40px; }
+  .card .div { height: 140px; background: rgba(60,52,120,.14); }
+  .p .lbl { font-weight: 600; font-size: 13px; letter-spacing: 3px; color: var(--mute); }
+  .p .amt { margin-top: 6px; font-family: "InterD", sans-serif; font-weight: 600; font-size: 86px; letter-spacing: -3.5px; line-height: 1; }
+  .p .amt .cur { font-size: 36px; letter-spacing: -.5px; margin-right: 6px; vertical-align: 38px; }
+  .p .was { margin-top: 10px; font-size: 16.5px; color: var(--mute); }
+  .p .was s { text-decoration-thickness: 1.5px; }
+  .fs { display: flex; flex-direction: column; gap: 24px; }
+  .f { display: flex; align-items: center; gap: 16px; }
+  .f .ic { width: 52px; height: 52px; border-radius: 16px; background: var(--grad); display: flex; align-items: center; justify-content: center;
+           box-shadow: 0 8px 18px rgba(80,90,255,.28); flex: 0 0 auto; }
+  .f .ic svg { width: 26px; height: 26px; }
+  .f .t { font-family: "InterD", sans-serif; font-weight: 600; font-size: 21px; letter-spacing: -.3px; }
+  .f .m { font-size: 14px; color: var(--mute); margin-top: 2px; }
+
+  .ftr { position: absolute; left: 56px; right: 56px; top: 1272px; display: flex; justify-content: space-between; align-items: center; }
+  .sw { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 15.5px; color: #4c4966; }
+  .sw .d { width: 22px; height: 22px; border-radius: 50%; box-shadow: 0 0 0 2px rgba(255,255,255,.9), 0 3px 8px rgba(40,30,90,.2); }
+  .sw .d.k { background: linear-gradient(135deg, #3a3a3a, #0c0c0c); }
+  .sw .d.w { background: linear-gradient(135deg, #fff, #e6e4ee); margin-left: 6px; }
+  .btn { display: flex; align-items: center; gap: 12px; background: var(--ink); color: #fff; border-radius: 40px; padding: 14px 16px 14px 26px;
+         font-family: "InterD", sans-serif; font-weight: 600; font-size: 18px; box-shadow: 0 10px 24px rgba(22,21,43,.25); }
+  .btn .arr { width: 30px; height: 30px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="poster" id="poster">
+  <div class="logo"><div class="w">AIHAA</div><div class="s">MARKETING SDN BHD</div></div>
+  <div class="pill glass"><span class="dot"></span>AIHAA ELITE · YEAR-END 2026</div>
+
+  <div class="h1">Year-End <span class="g">Sale</span></div>
+  <div class="sub">Save RM400. Available in black and white.</div>
+
+  <div class="shadow" style="left:140px; top:968px; width:400px; height:28px;"></div>
+  <div class="shadow" style="left:556px; top:976px; width:420px; height:28px;"></div>
+
+  <div class="card glass">
+    <div class="p">
+      <div class="lbl">PROMO PRICE</div>
+      <div class="amt"><span class="cur">RM</span>1,280</div>
+      <div class="was">Normal price <s>RM1,680</s></div>
+    </div>
+    <div class="div"></div>
+    <div class="fs">
+      <div class="f">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30.5 7.5a9 9 0 0 0-8.9 11.6L8.8 31.9a3.6 3.6 0 0 0 5.1 5.1l12.8-12.8A9 9 0 0 0 38.3 15l-5.6 5.6-4.9-1.3-1.3-4.9 5.6-5.6a9 9 0 0 0-1.6-1.3z"/></svg></div>
+        <div><div class="t">Free Installation</div><div class="m">Percuma pemasangan</div></div>
+      </div>
+      <div class="f">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 9 10.5v11.2c0 9.6 6.3 17.4 15 20.8 8.7-3.4 15-11.2 15-20.8V10.5L24 5z"/><path d="m17 24 5 5 9.5-10"/></svg></div>
+        <div><div class="t">3-Year Warranty</div><div class="m">Waranti 3 tahun</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="sw">Available in <span class="d k"></span><span class="d w"></span></div>
+    <div class="btn">Book yours today<span class="arr"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+  </div>
+</div>
+<script src="js/products.js"></script>
+<script>
+  placeElite({ scale: 1.0, centerX: 548, bottom: 986 });
+  // Floating "Save RM400" glass chip, added last so it sits above the products
+  const chip = document.createElement("div");
+  chip.className = "chip glass";
+  chip.style.cssText = "left: 872px; top: 352px;";
+  chip.innerHTML = '<div class="k">SAVE</div><div class="v">RM400</div>';
+  document.getElementById("poster").appendChild(chip);
+</script>
+</body>
+</html>
