@@ -15,7 +15,7 @@ Rumah guna air boring? 🚰 Check 4 tanda ni:
 Ada salah satu? Jom tengok DEMO LIVE sistem rawatan air boring di showroom AIHAA. Singgah 10 minit je!
 
 📍 Lot 1983, Jalan Bayam, Kampung Paya Rambai, 15200 Kota Bharu, Kelantan
-(Sebelah Kedai Makan Kak Ani, depan Candy Pet House)
+(Sebelah Kedai Makan Selera Kak Ni, depan Candy Pet House)
 
 Air rumah korang ada tanda yang mana? Komen 👇
 
@@ -34,7 +34,7 @@ Air rumah korang ada tanda yang mana? Komen 👇
 | 0:16 | IMG_1370 | DEMO LIVE di Showroom AIHAA |
 | 0:26 | IMG_1372 | JOM MASUK! |
 | 0:28 | InShot_135211 | Sistem rawatan air boring, Tengok sendiri hasilnya |
-| 0:43 | InShot_135935 | Depan Candy Pet House, Sebelah Kedai Makan Kak Ani, Singgah 10 minit je! |
+| 0:43 | InShot_135935 | Depan Candy Pet House, Sebelah Kedai Makan Selera Kak Ni, Singgah 10 minit je! |
 | 0:58 | Kad alamat | Alamat penuh showroom |
 
 ## Perlu semak
