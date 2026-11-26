@@ -23,3 +23,6 @@ venv/
 dist/
 build/
 *.log
+
+# Fail video render (terlalu besar untuk git)
+video-marketing/output/
